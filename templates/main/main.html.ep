@@ -1,0 +1,16 @@
+% layout 'main';
+% if (my $message = flash 'message') {
+  <span class="message"><b><%= $message %></b></span><br>
+% }
+Welcome <%= session 'user' %>.<br>
+
+<a href="<%== url_for %>" class="navigation">click here</a>
+to reload the page or
+<a href="/index.html" class="navigation">here</a>
+to move forward to a static page.
+
+% if (my $body = param 'body') {
+ <%= $body %>
+% }
+
+

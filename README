@@ -1,0 +1,49 @@
+mojo-Notice
+
+mojo-Notice - A MVC (DBIC,TT,CAS) Mojolicious Customer Resource and Account Manager inspired by Notice
+
+In the controller I prefer sub main { } to sub index { }
+Due to language support a Runmode/Controller MUST be three characters or longer and not be in the form
+/\w\w([_-]?\w\w)?/ e.g. en_GB or pt-br 
+but this seems like a limitation that we can live with
+
+INSTALLATION
+
+  In stall the database, set up the configuration, run script/create_dbic_schema.pl and then:
+
+	perl Makefile.PL
+	make
+	make test
+	sudo make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Notice
+
+You can also look for information in:
+
+    layout or ABOUT
+
+and at:
+
+    http://github.com/alexxroche/mojo-Notice
+
+    (
+        and if this ever gets to CPAN
+        http://search.cpan.org/~alexx/
+    )
+
+
+LICENSE AND COPYRIGHT
+
+Copyright (C) 2011 Alexx Roche
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+

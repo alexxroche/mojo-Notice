@@ -1,0 +1,6 @@
+This is an example of Mojolicious I18N with Template::Toolkit
+
+You can strip out the toolkit and use the default template, (or add that as another example)
+
+
+N.B. This is just example code DO NOT USE IN PRODUCTION as it is XSS vulnerable 

@@ -1,0 +1,17 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+use Mojolicious::Plugin::TtRenderer;
+
+app->renderer->default_handler('tt');
+
+get '/' => sub{
+  my $self = shift;
+  $self->render(
+        template_options => { INCLUDE_PATH => 'templates/', WRAPPER => 'wrapper.html.tt'},
+        template => 'index',
+        format   => 'html',
+        handler  => 'tt',
+    );
+};
+
+app->start;

@@ -1,0 +1,9 @@
+% layout 'main';
+<h2> Welcome to the list of Assets </h2>
+Once we add DBIx::Class support this will list all of the users in the database
+
+% if (stash 'body') {
+<br /> and:
+%= stash 'body'
+%}
+

@@ -1,0 +1,28 @@
+[% c.l('hello'); ' '; c.l('world') %] 
+<br />
+<br />
+[% c.l('Select a Language:') %] [% IF c.param('lang'); c.l('You seem to be speaking') %] [% c.param('lang'); END %]
+<br />
+
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]">[% c.l('index') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]de">[% c.l('German') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]fr">[% c.l('French') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]en_GB">[% c.l('English') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]en">[% c.l('Yank') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]pt-br">[% c.l('Brazilian portugese') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]ru">[% c.l('russian') %]</a><br />
+[% c.l('You could try') %]: <a href="/[% c.stash('site_path') %]lx">[% c.l('Alexx') %]</a><br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+[% IF c.stash('debug') %]
+DEBUG INFO:
+  [%# USE Dumper; Dumper.dump(c.stash('debug')) %]
+  [% c.stash('debug') %]
+[% END#IF %]

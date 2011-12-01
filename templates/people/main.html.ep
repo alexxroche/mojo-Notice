@@ -1,0 +1,14 @@
+% layout 'main';
+<h2> "you are in people" </h2>
+Here you will be able to <a href="<%= stash 'url_path' %><%= stash 'url_rm' %>/list" class="navigation">list</a>, 
+<a href="<%= stash 'rm_path' %>add" class="navigation">add</a> 
+and even <a href="<%= stash 'rm_path' %>delete" class="navigation">delete</a> users.
+
+<table border="1">
+<tr><td>param</td><td>  <%= param 'url_path' %> </td></tr>
+<tr><td>stash</td><td>  <%= stash 'url_path' %> </td></tr>
+<tr><td>session</td><td><%= session 'user' %> </td></tr>
+<tr><td>stash rm</td><td><%= stash 'url_rm' %> </td></tr>
+<tr><td>menu</td><td><%= stash 'pe_menu' %> </td></tr>
+</table>
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+HTTP_USER='www-data'; #If you are on debian
+HTTP_GROUP=$HTTP_USER; #If you are on debian
+
+mkdir tmp; chown $HTTP_USER:$HTTP_GROUP tmp; chmod 2755 tmp;
+

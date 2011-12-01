@@ -1,0 +1,24 @@
+% layout 'default';
+% title 'Welcome';
+<h2><%= $message %></h2>
+This page was generated from the template
+"templates/example/welcome.html.ep" and the layout
+"templates/layouts/default.html.ep",
+<a href="<%== url_for %>">click here</a>
+to reload the page or
+<a href="/index.html">here</a>
+to move forward to a static page.
+
+% layout 'default';
+%= form_for main => (method => 'post') => begin
+  % if (param 'user') {
+    <b>Wrong name or password, please try again.</b><br>
+  % }
+  Name:<br>
+  %= text_field 'user'
+  <br>Password:<br>
+  %= password_field 'pass'
+  <br>
+  %= submit_button 'Login'
+% end
+
