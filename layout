@@ -1,44 +1,44 @@
-.           # Rough explanation of the layout of this module 
-| ABOUT
-| Changes
-| lib . 
-|     | Notice.pm           
-|     ` Notice  . 
-|               | Auth.pm
-|               | C  .              # The 'C' of MVC 
-|               |    | Assets.pm
-|               |    | Example.pm
-|               |    | Login.pm
-|               |    | Main.pm
-|               |    | People.pm
-|               |    ` Public.pm
-|               |
-|               | Config.pm         # Just an idea, no longer used
-|               | DB -> Resultset -> DBIx::Class modules # The 'M' of MVC
-|               ` DB.pm
-| log                               # Where mojo puts logs by default
-| Makefile.PL                       # perl Makefile.PL; make && make test && sudo make install
-| MANIFEST                          # List of files
-| public .                          # This is meant for static content, but I have bigger for you!
-|        |css
-|        |examples .                # Some examples I threw (take that literally) together
-|        |         |ajax.pl         #   Ok, some are just cut-n-paste
-|        |         |i18n    # Full i18n example using TT
-|        |         |session_counter.pl      
-|        |         |tt      # Template::Toolkit example
-|        |         `under.pla       # but the ideas were helpful to me
-|        |favicon.ico
-|        |images                    # static images
-|        |index.html                # static page example
-|        |js                        # some js
-|        `robots.txt
-| README
-| script .                          # support scripts
-|        |create_dbic_schema.pl 
-|        |index.cgi                 # CGI version of mojo-Notice
-|        |notice                    # morbo version
-|        |notice.config             # Global config files
-|        `notice.mysql              # example DB schema
-| SIGNATURE                         # cpansign
-| t                                 # tests
-` templates                         # Templates and layouts, the 'V' of MVC
+.                               # Rough explanation of the layout of this module 
+|-- ABOUT
+|-- Changes
+|-- MANIFEST                    # List of files
+|-- Makefile.PL                 # perl Makefile.PL; make && make test && sudo make install
+|-- README
+|-- SIGNATURE                   # cpansign
+|-- lib
+|   |-- Notice
+|   |   |-- Auth.pm             # Authentication (of a sorts)
+|   |   |-- C                   # The 'C' of MVC
+|   |   |   |-- Assets.pm
+|   |   |   |-- Example.pm
+|   |   |   |-- Login.pm
+|   |   |   |-- Main.pm
+|   |   |   |-- People.pm
+|   |   |   `-- Public.pm
+|   |   |-- Config.pm           # Just an idea, no longer used
+|   |   |-- DB -- Result        # DBIx::Class modules, the 'M' of MVC
+|   |   `-- DB.pm
+|   `-- Notice.pm
+|-- log                         # Where mojo puts logs by default
+|-- public                      # This is meant for static content, but I have bigger for you!
+|   |-- css
+|   |-- examples                # Some examples I threw (take that literally) together,
+|   |   |-- ajax.pl             # Ok, some are just cut-n-paste..
+|   |   |-- i18n                # Full i18n example using TT
+|   |   |-- session_counter.pl
+|   |   |-- tt                  # Template::Toolkit example
+|   |   `-- under.pl            # ..but the ideas were helpful to me
+|   |-- favicon.ico
+|   |-- images                  # static images
+|   |-- index.html              # static page example
+|   |-- js                      # I remember when the rhino was out of fassion
+|   `-- robots.txt
+|-- script                      # support scripts
+|   |-- create_dbic_schema.pl
+|   |-- index.cgi               # CGI version of mojo-Notice
+|   |-- notice                  # morbo version
+|   |-- notice.config           # Global config files
+|   `-- notice.mysql            # example DB schema
+|-- t                           # tests
+`-- templates                   # Templates and layouts, the 'V' of MVC
+
